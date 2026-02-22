@@ -1,6 +1,8 @@
-# 🔗 OpenClaw ↔ MentraOS Bridge
+# 🦅 MentraClaw
 
-**Serverless bridge connecting MentraOS Smart Glasses to OpenClaw AI**
+**Give your AI eyes, ears, and voice through smart glasses**
+
+*MentraClaw is the sensory extension for OpenClaw AI - if OpenClaw gives your AI hands to manipulate the world, MentraClaw gives it eyes to see, ears to hear, and voice to speak directly on your head.*
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FRobertDaleSmith%2Fopenclaw-mentra-bridge)
 

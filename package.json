@@ -1,7 +1,7 @@
 {
-  "name": "openclaw-mentra-bridge",
+  "name": "mentraclaw",
   "version": "1.0.0",
-  "description": "Bridge MentraOS Smart Glasses to OpenClaw AI",
+  "description": "MentraClaw - Give your AI eyes, ears, and voice through smart glasses",
   "main": "api/index.js",
   "type": "module",
   "scripts": {
