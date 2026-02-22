@@ -9,9 +9,7 @@
     "build": "echo 'No build step needed for Vercel functions'",
     "deploy": "vercel --prod"
   },
-  "dependencies": {
-    "@mentra/sdk": "^2.1.30"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^22",
     "@vercel/node": "^3.0.15",
