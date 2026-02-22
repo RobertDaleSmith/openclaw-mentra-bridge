@@ -32,9 +32,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // Validate required environment variables
     const openclawToken = process.env.OPENCLAW_TOKEN;
     const openclawUrl = process.env.OPENCLAW_URL || 'http://localhost:18789';
+    const mentraosApiKey = process.env.MENTRAOS_API_KEY;
 
     if (!openclawToken) {
       console.error('OPENCLAW_TOKEN not configured');
+      return res.status(500).json({ error: 'Server configuration error' });
+    }
+
+    if (!mentraosApiKey) {
+      console.error('MENTRAOS_API_KEY not configured');
       return res.status(500).json({ error: 'Server configuration error' });
     }
 

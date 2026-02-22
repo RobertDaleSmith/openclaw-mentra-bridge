@@ -8,7 +8,8 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
     environment: {
       nodeVersion: process.version,
       openclawConfigured: !!process.env.OPENCLAW_TOKEN,
-      openclawUrl: process.env.OPENCLAW_URL || 'http://localhost:18789'
+      openclawUrl: process.env.OPENCLAW_URL || 'http://localhost:18789',
+      mentraosConfigured: !!process.env.MENTRAOS_API_KEY
     }
   });
 }
