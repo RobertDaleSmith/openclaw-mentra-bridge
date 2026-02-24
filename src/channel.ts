@@ -528,11 +528,15 @@ class FaceClawAppServer extends AppServer {
         }
 
         // Wake word filter — check for "Hey Mentra" or active listen window
-        const wakePattern = /^hey\s+mentra\b/i;
+        // Flexible matching: allow leading filler, punctuation, and common mistranscriptions
+        const wakePattern = /(?:^|[\s,.])\s*(?:hey|hay|a|eh)\s+(?:mentra|menta|mentor|mencia|mantra|menorah)\b/i;
         const inListenWindow = Date.now() < listenWindowUntil;
         const hasWakeWord = wakePattern.test(raw);
 
-        if (!hasWakeWord && !inListenWindow) return;
+        if (!hasWakeWord && !inListenWindow) {
+          console.log(`[MentraOS] 🔇 No wake word, no listen window: "${raw.substring(0, 60)}"`);
+          return;
+        }
 
         // Strip the wake word if present
         const text = hasWakeWord
